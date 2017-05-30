@@ -8,15 +8,16 @@
   <body>
 			<gallery>
 							<ul>
-                    <li><figure onclick="display(this.innerHTML)"><img src="http://lorempixel.com/320/240/animals"> <figcaption>Look at this dog</ficaption></figure></li>
-                    <li><figure><img src="http://lorempixel.com/320/240/animals/1"> <figcaption>Look at this cat</ficaption></figure></li>
-                    <li><figure><img src="http://lorempixel.com/320/240/animals/2"> <figcaption>Look at this moose</ficaption></figure></li>
-                    <li><figure><img src="http://lorempixel.com/320/240/animals/3"> <figcaption>Look at this squirrel</ficaption></figure></li>
+                    <li><figure onclick="display(this.innerHTML)"><img src="http://lorempixel.com/320/240/animals"> <figcaption>Look at this dog</figcaption></figure></li>
+                    <li><figure><img src="http://lorempixel.com/320/240/animals/1"> <figcaption>Look at this cat</figcaption></figure></li>
+                    <li><figure><img src="http://lorempixel.com/320/240/animals/2"> <figcaption>Look at this moose</figcaption></figure></li>
+                    <li><figure><img src="http://lorempixel.com/320/240/animals/3"> <figcaption>Look at this squirrel</figcaption></figure></li>
 							</ul>
 			</gallery>
       <lightbox>
+          <screen onclick="hide()"></screen>
 					<figure class="center"></figure>
-					<button class="close">close</button>
+					<button onclick="hide()" class="close">close</button>
 					<button class="prev">prev</button>
 					<button class="next">next</button>
       </lightbox>
@@ -27,6 +28,10 @@
           function display(figure) {
             destination.innerHTML = figure;
             lightbox.classList.add('shown');
+          }
+
+          function hide() {
+            lightbox.classList.remove('shown');
           }
       </script>
   </body>
