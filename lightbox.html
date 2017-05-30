@@ -5,16 +5,45 @@
     <title>PonchartrainBiota</title>
   </head>
   <body>
-			<section>
+      <style>
+          body {
+            margin: 0;
+          }
+      </style>
+			<gallery>
 							<ul>
-								<li><figure><figcaption>Look at this dawg</ficaption></figure></li>
+                  <li><figure><img src="http://lorempixel.com/320/240/animals"> <figcaption>Look at this dawg</ficaption></figure></li>
+                  <li><figure><img src="http://lorempixel.com/320/240/city"> <figcaption>Look at this dawg</ficaption></figure></li>
+                  <li><figure><img src="http://lorempixel.com/320/240/animals/1"> <figcaption>Look at this dawg</ficaption></figure></li>
+                  <li><figure><img src="http://lorempixel.com/320/240/food"> <figcaption>Look at this dawg</ficaption></figure></li>
 							</ul>
-			</section>
+			</gallery>
+      <style>
+          gallery ul {
+              margin: 0;
+              padding: 0;
+              overflow: auto;
+          }
+          gallery ul li {
+            float: left;
+          }
+          gallery ul figure {
+            margin: 0;
+          }
+          gallery ul figcaption {
+            display: none;
+          }
+      </style>
       <lightbox>
 					<figure></figure>
 					<button>left</button>
 					<button>right</button>
 					<button>close</button>
       </lightbox>
+      <style>
+        lightbox {
+          display: none;
+        }
+      </style>
   </body>
 </html>
