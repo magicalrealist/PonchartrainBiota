@@ -8,24 +8,25 @@
   <body>
 			<gallery>
 							<ul>
-                    <li><figure id="1" onclick="display()"><img src="http://lorempixel.com/320/240/animals"> <figcaption><span>Look at this dawg<span></ficaption></figure></li>
+                    <li><figure onclick="display(this.innerHTML)"><img src="http://lorempixel.com/320/240/animals"> <figcaption>Look at this dog</ficaption></figure></li>
                     <li><figure><img src="http://lorempixel.com/320/240/animals/1"> <figcaption>Look at this cat</ficaption></figure></li>
                     <li><figure><img src="http://lorempixel.com/320/240/animals/2"> <figcaption>Look at this moose</ficaption></figure></li>
                     <li><figure><img src="http://lorempixel.com/320/240/animals/3"> <figcaption>Look at this squirrel</ficaption></figure></li>
 							</ul>
 			</gallery>
       <lightbox>
-					<figure></figure>
-					<button>left</button>
-					<button>right</button>
-					<button>close</button>
+					<figure class="center"></figure>
+					<button class="close">close</button>
+					<button class="prev">prev</button>
+					<button class="next">next</button>
       </lightbox>
       <script>
-          var destination =  document.getElementsByTagName('lightbox')[0];
+          var lightbox = document.getElementsByTagName('lightbox')[0];
+          var destination =  document.getElementsByClassName('center')[0];
 
-          function display() {
-            console.log(this.innerHTML);
-            destination.innerHTML = this.innerHTML;
+          function display(figure) {
+            destination.innerHTML = figure;
+            lightbox.classList.add('shown');
           }
       </script>
   </body>

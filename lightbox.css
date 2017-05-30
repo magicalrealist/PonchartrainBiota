@@ -27,7 +27,7 @@ gallery ul img {
 gallery ul figcaption {
   display: none;
 }
-gallery ul li:hover figcaption {
+gallery ul figure:hover figcaption {
   display: block;
   width: 100%;
   position: absolute;
@@ -37,7 +37,7 @@ gallery ul li:hover figcaption {
   text-align: center;
   box-sizing: border-box;
   padding: 10px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.7);
 }
 
 /* lightbox */
@@ -49,4 +49,32 @@ lightbox {
   height: 100%;
   top: 0;
   left: 0;
+  background: rgba(0,0,0,0.9);
+}
+lightbox button {
+  position: absolute;
+}
+lightbox button.close{
+  right: 0;
+  top: 0;
+}
+lightbox button.next, lightbox button.prev {
+  top: 50%;
+  transform: translate(0,-50%);
+}
+lightbox button.prev {
+  left: 0;
+}
+lightbox button.next {
+  right: 0;
+}
+lightbox.shown {
+  display: block;
+}
+lightbox.shown figure {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
