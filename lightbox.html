@@ -3,47 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>PonchartrainBiota</title>
+    <link rel="stylesheet" href="lightbox.css">
   </head>
   <body>
-      <style>
-          body {
-            margin: 0;
-          }
-      </style>
 			<gallery>
 							<ul>
-                  <li><figure><img src="http://lorempixel.com/320/240/animals"> <figcaption>Look at this dawg</ficaption></figure></li>
-                  <li><figure><img src="http://lorempixel.com/320/240/city"> <figcaption>Look at this dawg</ficaption></figure></li>
-                  <li><figure><img src="http://lorempixel.com/320/240/animals/1"> <figcaption>Look at this dawg</ficaption></figure></li>
-                  <li><figure><img src="http://lorempixel.com/320/240/food"> <figcaption>Look at this dawg</ficaption></figure></li>
+                    <li><figure id="1" onclick="display()"><img src="http://lorempixel.com/320/240/animals"> <figcaption><span>Look at this dawg<span></ficaption></figure></li>
+                    <li><figure><img src="http://lorempixel.com/320/240/animals/1"> <figcaption>Look at this cat</ficaption></figure></li>
+                    <li><figure><img src="http://lorempixel.com/320/240/animals/2"> <figcaption>Look at this moose</ficaption></figure></li>
+                    <li><figure><img src="http://lorempixel.com/320/240/animals/3"> <figcaption>Look at this squirrel</ficaption></figure></li>
 							</ul>
 			</gallery>
-      <style>
-          gallery ul {
-              margin: 0;
-              padding: 0;
-              overflow: auto;
-          }
-          gallery ul li {
-            float: left;
-          }
-          gallery ul figure {
-            margin: 0;
-          }
-          gallery ul figcaption {
-            display: none;
-          }
-      </style>
       <lightbox>
 					<figure></figure>
 					<button>left</button>
 					<button>right</button>
 					<button>close</button>
       </lightbox>
-      <style>
-        lightbox {
-          display: none;
-        }
-      </style>
+      <script>
+          var destination =  document.getElementsByTagName('lightbox')[0];
+
+          function display() {
+            console.log(this.innerHTML);
+            destination.innerHTML = this.innerHTML;
+          }
+      </script>
   </body>
 </html>
